@@ -7,18 +7,22 @@
         <div class="container">
           <h1 class="title">Just Music!</h1>
           <h2 class="subtitle">
-             A place just for music!
+             A place just for music!!!
           </h2>
 
-          <SignUpForm v-if="this.display = false"></SignUpForm>
+        
+          <SignUpForm class="signup" v-show="signup"></SignUpForm>
+          <LoginForm class="login" v-show="login"></LoginForm>
+        
+          
 
           <div class="button-block">
 
-            <button class="button is-xl is-dark" @click="toggle()">
+            <button class="button is-xl is-dark" @click="login=true">
               Login
             </button>
 
-            <button class="button is-xl is-dark">
+            <button class="button is-xl is-dark" @click="signup != signup">
               Sign Up
             </button>
 
@@ -30,21 +34,23 @@
   </div>
 </template>
 
-
-
 <script>
-import SignUpForm from "../components/SignUpForm.vue"
-  export default {
-    name: 'LoginPage',
-    components: {
-      SignUpForm
-    },  
-    methods: {
-      toggle(){
-        this.display = false;
-      }
-    }
-  };
+import LoginForm from '../HomeComponents/LoginForm.vue';
+import SignUpForm from '../HomeComponents/SignUpForm.vue';
+
+ export default {
+   name: "HomePage",
+   components: {
+     SignUpForm, LoginForm
+   },
+   data() {
+     return{
+       login: false,
+       signup: false
+     }
+   }
+ }
+  
 </script>
 
 <style lang="scss" scoped>
