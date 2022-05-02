@@ -22,7 +22,7 @@
               Login
             </button>
 
-            <button class="button is-xl is-dark" @click="signup != signup">
+            <button class="button is-xl is-dark" @click="signup=true">
               Sign Up
             </button>
 
