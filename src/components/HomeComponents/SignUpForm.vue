@@ -43,3 +43,9 @@
     name: 'SignUpForm'
   };
 </script>
+
+<style lang="scss" scoped>
+    .field {
+        background-color: limegreen;
+    }
+</style>

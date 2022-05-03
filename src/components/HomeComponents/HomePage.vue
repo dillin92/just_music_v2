@@ -46,7 +46,7 @@ import SignUpForm from '../HomeComponents/SignUpForm.vue';
    },
    data() {
      return{
-       login: false,
+       login: false, 
        signup: false,
 
      
