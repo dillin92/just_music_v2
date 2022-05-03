@@ -1,5 +1,5 @@
 <template>
-
+    <section>
     <div class="field">
         <input class="input" type="username" placeholder="Enter Your Username Here">
     </div>
@@ -34,6 +34,8 @@
         </div>
 
     </div>
+</section>
+    
 </template>
 
 <script>

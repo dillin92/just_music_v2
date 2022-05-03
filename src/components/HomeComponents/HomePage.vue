@@ -11,18 +11,18 @@
           </h2>
 
         
-          <SignUpForm class="signup" v-show="signup"></SignUpForm>
+          <SignUpForm class="signup" v-if="signup"></SignUpForm>
           <LoginForm class="login" v-show="login"></LoginForm>
         
           
 
           <div class="button-block">
 
-            <button class="button is-xl is-dark" @click="login=true">
+            <button class="button is-xl is-dark" @click="login=true, signup = false">
               Login
             </button>
 
-            <button class="button is-xl is-dark" @click="signup=true">
+            <button class="button is-xl is-dark" @click="signup=true, login = false">
               Sign Up
             </button>
 
@@ -38,6 +38,7 @@
 import LoginForm from '../HomeComponents/LoginForm.vue';
 import SignUpForm from '../HomeComponents/SignUpForm.vue';
 
+
  export default {
    name: "HomePage",
    components: {
@@ -46,8 +47,11 @@ import SignUpForm from '../HomeComponents/SignUpForm.vue';
    data() {
      return{
        login: false,
-       signup: false
+       signup: false,
+
+     
      }
+     
    }
  }
   
