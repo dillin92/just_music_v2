@@ -28,7 +28,6 @@
   </div>
 </template>
 <script>
-import SidebarRow from "./SidebarRow.vue";
 import { ref, onMounted } from "vue";
 import {
   ChevronDownIcon,
