@@ -5,7 +5,7 @@
       <div class="hero-body">
         
         <div class="container">
-          <h1 class="title">Just Music!</h1>
+          <h1 class="title">Just Music!!!</h1>
           <h2 class="subtitle">
              A place just for music!!!
           </h2>

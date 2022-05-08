@@ -16,7 +16,7 @@ const firebaseConfig = {
     
     measurementId: 'xxx-xxx-xxx',
     
-    },
+    }
     
     const cometChatConfig = {
     
