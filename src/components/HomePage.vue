@@ -35,8 +35,8 @@
 </template>
 
 <script>
-import LoginForm from '../HomeComponents/LoginForm.vue';
-import SignUpForm from '../HomeComponents/SignUpForm.vue';
+import LoginForm from './LoginForm.vue';
+import SignUpForm from './SignUpForm.vue';
 
 
  export default {

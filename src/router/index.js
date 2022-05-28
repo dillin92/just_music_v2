@@ -6,7 +6,6 @@ const routes = [
     name: 'Wall',
     component: () => import(/* webpackChunkName: "wall" */ '@/views/Wall.vue'),
     meta: { requiresAuth: true },
-    template: '<router-view>'
   },
   {
     path: '/users',
@@ -36,6 +35,13 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "login" */ '@/views/Login.vue'),
   },
+  {
+    path: '/signup',
+    name: 'signup',
+    component: () => 
+    import(/* webpackChunkName: "signup" */'@/views/Signup.vue'),
+  }
+
 ]
 
 const router = createRouter({

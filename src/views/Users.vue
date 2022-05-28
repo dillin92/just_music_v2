@@ -11,11 +11,10 @@
 
 <script>
 import MainHeader from "../components/MainHeader.vue";
-import Sidebar from "../components/Sidebar.vue";
 import FriendRequests from "../components/FriendRequests.vue";
 import Widget from "../components/Widget.vue";
 export default {
-  name: "friends",
+  name: "friends-el",
   components: {
     MainHeader,
     Sidebar,

@@ -12,12 +12,11 @@
 
 <script>
 import MainHeader from "../components/MainHeader.vue";
-import Sidebar from "../components/Sidebar.vue";
 import User from "../components/User.vue";
 import Group from "../components/Group.vue";
 import Widget from "../components/Widget.vue";
 export default {
-  name: "chats",
+  name: "chats-el",
   props: ['id', 'type'],
   setup() {
     return {};

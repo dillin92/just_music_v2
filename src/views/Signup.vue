@@ -2,21 +2,45 @@
   <div class="login grid place-items-center p-10">
     <img src="../assets/just-music-log(small).jpg" alt="Just Music Logo" loading="lazy" />
     <div class="flex items-center">
-      <button
-        class="
-          my-5
-          p-3
-          rounded-full
-          text-white text-center
-          cursor-pointer
-          focus:outline-none
-        "
-        @click="signIn"
-      >
-        {{ !loading ? "Sign In With Google" : "Signing..." }}
-      </button>
+    
+   <section>
+    <div class="field">
+        <input class="input" type="username" placeholder="Enter Your Username Here">
+    </div>
 
-      <router-link to="/signup"> Sign Up!</router-link>
+    <div class="field">
+        <p class="control has-icons-left has-icons-right">
+            <input class="input" type="email" placeholder="Email">
+            <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+            </span>
+            <span class="icon is-small is-right">
+            <i class="fas fa-check"></i>
+            </span>
+        </p>
+
+        <div class="field">
+            <p class="control has-icons-left">
+                <input class="input" type="password" placeholder="Password">
+                <span class="icon is-small is-left">
+                <i class="fas fa-lock"></i>
+                </span>
+            </p>
+        </div>
+
+         <div class="field">
+            <p class="control has-icons-left">
+                <input class="input" type="confirm-password" placeholder="Confirm password">
+                <span class="icon is-small is-left">
+                <i class="fas fa-lock"></i>
+                </span>
+            </p>
+        </div>
+
+    </div>
+</section>
+
+     
 
       
     </div>
@@ -29,9 +53,11 @@ import { CometChat } from "@cometchat-pro/chat";
 import { cometChatConfig } from "../app.config";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
+import SignUpForm from '../components/SignUpForm.vue';
 export default {
-  name: "login-el",
+  name: "signup",
   setup() {
+    SignUpForm
     let loading = ref(false);
     const router = useRouter();
     const signIn = () => {
@@ -45,25 +71,7 @@ export default {
           alert(error.message);
         });
     };
-    const loginCometChat = (data) => {
-      const authKey = cometChatConfig.AUTH_KEY;
-      CometChat.login(data.uid, authKey)
-        .then((u) => {
-          console.log(u);
-          localStorage.setItem('user', JSON.stringify(data))
-          loading.value = false;
-          router.push("/");
-        })
-        .catch((error) => {
-          if (error.code === "ERR_UID_NOT_FOUND") {
-            signUpWithCometChat(data);
-          } else {
-            console.log(error);
-            loading.value = false;
-            alert(error.message);
-          }
-        });
-    };
+   
 
 
     const signUpWithCometChat = (data) => {

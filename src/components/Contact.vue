@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: "contact",
+  name: "contact-el",
   props: ["src", "name"],
   setup() {
     return {};

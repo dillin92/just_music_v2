@@ -13,7 +13,7 @@
 
 <script>
 import { ref } from "vue";
-import StoryCard from "./StoryCard.vue";
+import StoryCard from "./HomeComponents/StoryCard.vue";
 export default {
   components: { StoryCard },
   setup() {

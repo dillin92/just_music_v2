@@ -3,7 +3,7 @@
     <!-- Left -->
     <div class="flex items-center">
       <img
-        src="../assets/logo.png"
+        src="../assets/just-music-log(small).jpg"
         alt="Facebook Logo"
         width="40"
         height="40"
