@@ -1,15 +1,14 @@
 <template>
- <HomePage/>
+ <div id="app" class="h-screen bg-gray-100 overflow-hidden">
+    <router-view :key="$route.path"/>
+  </div>
 </template>
 
 <script>
-import HomePage from './components/HomeComponents/HomePage.vue'
 
 export default {
   name: 'App',
-  components: {
-    HomePage,
-  }
+ 
 }
 </script>
 

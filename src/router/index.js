@@ -6,6 +6,7 @@ const routes = [
     name: 'Wall',
     component: () => import(/* webpackChunkName: "wall" */ '@/views/Wall.vue'),
     meta: { requiresAuth: true },
+    template: '<router-view>'
   },
   {
     path: '/users',
